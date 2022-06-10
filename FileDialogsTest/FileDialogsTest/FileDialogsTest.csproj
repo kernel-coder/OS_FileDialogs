@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+	<DefineSilverlight>true</DefineSilverlight>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+	<Page Include="ChildWindow1.xaml">
+	  <Generator>MSBuild:Compile</Generator>
+	</Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="App.xaml.cs" />
+    <Compile Include="BindableDialogResults.cs" />
+    <Compile Include="ChildWindow1.xaml.cs" />
+    <Compile Include="MainPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLight.OpenSilver" Version="1.0.0-private-2022-05-05-220931-6e5a0a60" />
+    <PackageReference Include="OpenSilver" Version="1.0.0-private-2022-06-07-060322-3a56aff5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FileDialogs.OpenSilver\FileDialogs.OpenSilver.csproj" />
+  </ItemGroup>
+  
+</Project>

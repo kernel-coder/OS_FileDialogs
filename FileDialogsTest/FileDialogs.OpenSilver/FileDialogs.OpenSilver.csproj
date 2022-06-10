@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+	<DefineSilverlight>true</DefineSilverlight>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="FileDownloaderDialog.cs" />
+    <Compile Include="FileUploaderDialog.cs" />
+    <Compile Include="SaveFileDialogEx.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="1.0.0-private-2022-06-07-060322-3a56aff5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="SaveFileDialogEx.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  
+</Project>
